@@ -1,0 +1,30 @@
+.admin , .admin form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.admin form{
+    width: 40%;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.admin form input , .admin form lebal ,.admin form textarea {
+    width: 45%;
+    margin: 5px;
+    /* width: 45%;
+    margin: 5px; */
+    font-size: 18px;
+}
+
+.admin form ul {
+    width: 100%;
+    margin: 5px;
+}
+ 
+.admin form h1 , .admin form h2 , .admin form h3{
+    width: 100%;
+    margin: 5px;
+}

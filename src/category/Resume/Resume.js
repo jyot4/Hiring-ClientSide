@@ -5,12 +5,16 @@ import { HireContext } from '../../App';
 function Resume() {
 
   const { condedate , jwttoken} = useContext(HireContext);
-  return (
+  return ( 
     <>
     <div className='resume'>
         <section>
           <h1>{condedate.fullname}</h1>
           <h2>{condedate.course}</h2>
+          <div className='social'>
+              <button className='whatshap'>Whatshap</button>
+              <button className='gmail'>Gmail</button>
+          </div>
         </section>
     </div>
     </>

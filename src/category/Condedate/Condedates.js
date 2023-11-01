@@ -5,7 +5,7 @@ import "./Condedates.css"
 import axios from 'axios';
 import serverUrl from '../../serverUrl';
 import { useNavigate } from 'react-router-dom';
-// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
@@ -14,6 +14,9 @@ function Condedates() {
   const { condedates , setCondedate , jwttoken} = useContext(HireContext);
 
  console.log(condedates)
+
+ //.........................candidate click...................//
+
   function hadleClick(e , condedateId){
     console.log(condedateId)
     axios.patch('http://localhost:8080/LikeCondedate', { condedateId })
@@ -29,6 +32,14 @@ function Condedates() {
     });
   }
 
+ //.........................candidate like.................................//
+
+ function handleLike(e){
+  e.preventDefault()
+  
+
+ }
+
   function hadleClick(){
 
   }
@@ -43,9 +54,10 @@ function Condedates() {
             <button
                   className="heartBtn"
                   >
-                  {/* {(userLikedBooks.includes(book._id)) ? */}
-                   {/* <FavoriteIcon sx={{ fontSize: 28 }} className="redHeartIcon" />  */}
-                  {/* //  : <FavoriteBorderIcon sx={{ fontSize: 28 }} className="heartIcon" />} */}
+                  // {/* {(userLikedBooks.includes(book._id)) ? */}
+                  //  {/* <FavoriteIcon sx={{ fontSize: 28 }} className="redHeartIcon" />  */}
+                  // {/* //  : <FavoriteBorderIcon sx={{ fontSize: 28 }} className="heartIcon" />} */}
+                  <Link onClick={handleLike} to=""><FavoriteBorderIcon/></Link>
                 </button>
           </div>
         ))}
