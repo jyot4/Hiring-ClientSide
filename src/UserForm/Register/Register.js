@@ -51,7 +51,7 @@ function Register() {
         <section className='Reg'>
           <section className='homeContent'>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <label>name</label>
+              <label>Name</label>
               <input placeholder='enter Full Name'  {
                           ...register('fullname', { required: true, })}></input>
                           {errors.fullname && <p role="alert">Full Name is required</p>}
